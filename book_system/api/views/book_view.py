@@ -6,8 +6,9 @@ from rest_framework.decorators import action
 from rest_framework.status import HTTP_400_BAD_REQUEST, HTTP_200_OK
 from rest_framework.response import Response
 from book_system.api.models import Book
-from book_system.api.serializers import BookSerializer
+from book_system.api.serializers import BookSerializer, BookPriceAverageSerializer
 from book_system.api.services import BookService
+from drf_spectacular.utils import extend_schema, OpenApiParameter, OpenApiExample
 
 
 class BookPagination(PageNumberPagination):
@@ -22,6 +23,16 @@ class BookViewSet(ModelViewSet):
     serializer_class = BookSerializer
     pagination_class = BookPagination
 
+    @extend_schema(
+        responses={200: BookPriceAverageSerializer},
+        parameters=[
+            OpenApiParameter(
+                name="year",
+                description="año de publicacion",
+                required=True,
+            ),
+        ],
+    )
     @action(methods=["GET"], detail=False)
     def get_avarage_price(self, request):
         year = request.query_params.get("year", None)
