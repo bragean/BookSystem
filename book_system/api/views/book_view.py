@@ -1,14 +1,13 @@
 # Book View
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.pagination import PageNumberPagination
-from rest_framework.permissions import AllowAny
 from rest_framework.decorators import action
 from rest_framework.status import HTTP_400_BAD_REQUEST, HTTP_200_OK
 from rest_framework.response import Response
 from book_system.api.models import Book
 from book_system.api.serializers import BookSerializer, BookPriceAverageSerializer
 from book_system.api.services import BookService
-from drf_spectacular.utils import extend_schema, OpenApiParameter, OpenApiExample
+from drf_spectacular.utils import extend_schema, OpenApiParameter
 
 
 class BookPagination(PageNumberPagination):
@@ -18,7 +17,6 @@ class BookPagination(PageNumberPagination):
 
 
 class BookViewSet(ModelViewSet):
-    permission_classes = [AllowAny]
     queryset = Book.objects.filter(is_active=True)
     serializer_class = BookSerializer
     pagination_class = BookPagination
