@@ -24,7 +24,7 @@ class BookService:
 
         book_price_average_serializer = BookPriceAverageSerializer(
             data={
-                "average_price": (book_total_price["price__sum"]/book_total_number),
+                "average_price": round(book_total_price["price__sum"]/book_total_number, 2),
                 "number_of_books": book_total_number,
                 "year": year,
             }
