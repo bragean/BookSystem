@@ -12,6 +12,16 @@ License: MIT
 Moved to [settings](http://cookiecutter-django.readthedocs.io/en/latest/settings.html).
 
 ## Basic Commands
+Desarrollo (archivo local.yml)
+Docker build containers (buildear)
+- sudo docker-compose -f local.yml build
+Up the project (levantar)
+- sudo docker-compose -f local.yml up
+Up the project with detach (levantar liberando la consola)
+- sudo docker-compose -f local.yml up -d
+Down the project (bajar )
+ctrl + c
+sudo docker-compose -f local.yml down
 
 ### Setting Up Your Users
 
