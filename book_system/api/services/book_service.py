@@ -4,17 +4,26 @@ from book_system.api.models import Book
 from django.db.models import Sum
 
 
-class BookService():
+class BookService:
+
+    def get_all():
+        return Book.objects.filter(is_active=True)
+
+    def get_by_year(year):
+        return Book.objects.filter(is_active=True, published_date__year=year)
 
     def get_avarage_price(year):
-        book_instance = Book.objects.filter(published_date__year=year)
-        average_price = book_instance.aggregate(Sum("price"))
-        number_of_books = book_instance.count()
+        book_instance_list = BookService.get_by_year(year=year)
+        book_total_price = book_instance_list.aggregate(Sum("price"))
+        book_total_number = book_instance_list.count()
+
+        if book_total_number == 0:
+            book_total_number = 1
 
         book_price_average_serializer = BookPriceAverageSerializer(
             data={
-                "average_price": (average_price["price__sum"] / number_of_books),
-                "number_of_books": number_of_books,
+                "average_price": (book_total_price["price__sum"] / book_total_number),
+                "number_of_books": book_total_number,
                 "year": year,
             }
         )
