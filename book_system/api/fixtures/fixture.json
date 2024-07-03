@@ -1,0 +1,62 @@
+[
+	{
+		"model": "api.Genre",
+		"fields":{
+            "created": "2023-01-01",
+            "modified": "2023-01-01",
+            "created_by": null,
+            "modified_by": null,
+            "is_active": true,
+            "name": "Comedia",
+            "code": "comedy"
+		}
+	},
+    {
+		"model": "api.Genre",
+		"fields":{
+            "created": "2023-01-01",
+            "modified": "2023-01-01",
+            "created_by": null,
+            "modified_by": null,
+            "is_active": true,
+            "name": "Ciencia Ficción",
+            "code": "sci-fi"
+		}
+	},
+    {
+		"model": "api.Genre",
+		"fields":{
+            "created": "2023-01-01",
+            "modified": "2023-01-01",
+            "created_by": null,
+            "modified_by": null,
+            "is_active": true,
+            "name": "Romantico",
+            "code": "romantic"
+		}
+	},
+    {
+		"model": "api.Genre",
+		"fields":{
+            "created": "2023-01-01",
+            "modified": "2023-01-01",
+            "created_by": null,
+            "modified_by": null,
+            "is_active": true,
+            "name": "Acción",
+            "code": "action"
+		}
+	},
+    {
+		"model": "api.Genre",
+		"fields":{
+            "created": "2023-01-01",
+            "modified": "2023-01-01",
+            "created_by": null,
+            "modified_by": null,
+            "is_active": true,
+            "name": "Drama",
+            "code": "drama"
+		}
+	},
+]
