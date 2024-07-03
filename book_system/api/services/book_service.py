@@ -19,6 +19,8 @@ class BookService:
 
         if book_total_number == 0:
             book_total_number = 1
+        
+        print("gggg", book_total_price["price__sum"])
 
         book_price_average_serializer = BookPriceAverageSerializer(
             data={
