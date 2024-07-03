@@ -2,8 +2,8 @@
 	{
 		"model": "api.Genre",
 		"fields":{
-            "created": "2023-01-01",
-            "modified": "2023-01-01",
+            "created": "2024-07-03",
+            "modified": "2024-07-03",
             "created_by": null,
             "modified_by": null,
             "is_active": true,
@@ -14,8 +14,8 @@
     {
 		"model": "api.Genre",
 		"fields":{
-            "created": "2023-01-01",
-            "modified": "2023-01-01",
+            "created": "2024-07-03",
+            "modified": "2024-07-03",
             "created_by": null,
             "modified_by": null,
             "is_active": true,
@@ -26,8 +26,8 @@
     {
 		"model": "api.Genre",
 		"fields":{
-            "created": "2023-01-01",
-            "modified": "2023-01-01",
+            "created": "2024-07-03",
+            "modified": "2024-07-03",
             "created_by": null,
             "modified_by": null,
             "is_active": true,
@@ -38,8 +38,8 @@
     {
 		"model": "api.Genre",
 		"fields":{
-            "created": "2023-01-01",
-            "modified": "2023-01-01",
+            "created": "2024-07-03",
+            "modified": "2024-07-03",
             "created_by": null,
             "modified_by": null,
             "is_active": true,
@@ -50,8 +50,8 @@
     {
 		"model": "api.Genre",
 		"fields":{
-            "created": "2023-01-01",
-            "modified": "2023-01-01",
+            "created": "2024-07-03",
+            "modified": "2024-07-03",
             "created_by": null,
             "modified_by": null,
             "is_active": true,
